@@ -1,0 +1,38 @@
+<odoo>
+    <record id="view_user_data_form" model="ir.ui.view">
+        <field name="name">user.data.form</field>
+        <field name="model">user.data</field>
+        <field name="arch" type="xml">
+            <form string="Dati Utente">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="value"/>
+                        <field name="image" widget="image" class="image-preview"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_user_data_list" model="ir.ui.view">
+        <field name="name">user.data.list</field>
+        <field name="model">user.data</field>
+        <field name="arch" type="xml">
+            <list string="Dati Utente">
+                <field name="name"/>
+                <field name="value"/>
+                <field name="image" widget="image" class="image-preview" options="{'preview_image': 'image'}"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_user_data" model="ir.actions.act_window">
+        <field name="name">Dati Utente</field>
+        <field name="res_model">user.data</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_user_data_root" name="Dati Utente" sequence="1"/>
+    <menuitem id="menu_user_data" parent="menu_user_data_root" action="action_user_data" name="Gestisci Dati"/>
+</odoo>

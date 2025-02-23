@@ -1,0 +1,33 @@
+.image-preview img {
+    max-width: 150px;
+    max-height: 150px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border-radius: 5px;
+}
+
+.image-preview img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.image-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
